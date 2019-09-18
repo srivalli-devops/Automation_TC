@@ -1,0 +1,11 @@
+*** Settings ***
+Resource          ../Keywords/amazonKeywords.txt
+
+Suite Setup    Run keywords      Create a Directory for Videos      IMPORT_VARIABLE_FILE
+Test Setup     Run keywords     Record Video    Launch Amazon Region Wise Application
+Test Teardown  Run keywords     Close Browser Application    Stop Video Recording
+
+*** Test Cases ***
+01_SignIn Amazon
+    Sign Into Amazon
+    Verify User Account

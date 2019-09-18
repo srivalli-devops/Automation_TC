@@ -1,0 +1,26 @@
+*** Settings ***
+Resource          ../Keywords/amazonKeywords.txt
+
+Suite Setup    Create a Directory for Videos
+Test Setup     Run keywords     Record Video    Launch Amazon Browser Application
+Test Teardown  Run keywords     Close Browser Application    Stop Video Recording
+
+*** Test Cases ***
+01_Verify_Shop_Categories
+    Verify Amazon List  ${shopCategoryLoc}  ${categoryListLoc}  ${expCategoryList}
+
+02_Add_To_Cart
+    Add Item To Cart  ${TV}
+    Proceed To Buy
+    Proceed to SignIn
+    Proceed To Payment
+    Enter Payment Details
+    Review Order Details  ${TV}  ${quanity}
+
+03_Modify_Cart
+    Add Item To Cart  ${Item2}
+    Add Item To Cart  ${Item3}
+    Go To Cart
+    Modify Quantity in Cart  ${ItemOrder1}  3
+    Modify Quantity in Cart  ${ItemOrder2}  2
+    Empty Shopping Cart

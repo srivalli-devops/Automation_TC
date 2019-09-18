@@ -1,0 +1,19 @@
+*** Variables ***
+${titleElemLoc}                 //main[@id='main']//div[@class='post']//h3[contains(text(),\"Selenium Practice Form\")]
+${firstName_TbLoc}              name=firstname
+${lastName_TbLoc}               name=lastname
+${groupName_Loc}                sex
+${groupNameVal_Loc}             Female
+${prof_ChBLoc}                  id=profession-1
+${cont_CBLoc}                   id=continents
+${selCmd_CBLoc}                 id=selenium_commands
+${filePath_Loc}                 id=photo
+${btn_Loc}                      id=submit
+${Link_Loc}                     //main[@id='main']//div[@class='post']//div[@class='post-body entry-content float-container']/div/div[3]//span/a
+${Share_Loc}                    //div[@class='post-bottom']//div[@class='post-share-buttons post-share-buttons-bottom']//div[@class='flat-icon-button ripple']
+${Email_Loc}                    xpath=(//span[@class='platform-sharing-text'][contains(.,'Email')])[2]
+${signin_Loc}                   id=loginbutton
+${subLink_Loc}                  xpath=//a[@class='btn btn-primary'][contains(.,'Sign up')]
+${home_Loc}                     Home
+${swicthTo}                     NEW
+${switchBack}                   MAIN

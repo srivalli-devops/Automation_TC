@@ -1,0 +1,38 @@
+*** Settings ***
+Resource          ../Keywords/techlisticKeywords.txt
+
+Suite Setup    Create a Directory for Videos
+Test Setup     Run keywords     Record Video    Launch Techlistic Browser Application
+Test Teardown  Run keywords     Close Browser Application    Stop Video Recording
+Test Timeout  60s
+
+*** Test Cases ***
+
+01_Input_First_And_Last_Name
+    [Tags]  Sanity
+    Wait Until Techlistic HomePage Is Visible
+    Input First and Last Name   ${fName}   ${lName}
+
+02_Select_Gender_And_Profession
+    [Tags]  Regression
+    Select Gender   ${groupNameVal_Loc}
+    Select Profession   ${prof_ChBLoc}
+
+03_Select_Continet_And_Selenium_Commands
+    [Tags]  Regression
+    Select Continent    ${continent}
+    Select Selenium Commands    @{selList}
+
+04_Upload_Image_File
+    [Tags]  Regression
+    Upload File in Techlistic Browser
+
+05_Click_on_Telegraph_Link
+    [Tags]  Sanity
+    Click on Telgraph link
+
+06_Switch_from_Telegraph_to_Techlistic
+    [Tags]  Sanity
+    Click on Telgraph link
+    Switch BackTo Techlistic Window
+

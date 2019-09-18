@@ -1,0 +1,62 @@
+*** Variables ***
+###Login Page
+${signInLoc}                    id=a-autoid-0-announce
+${emailLoc}                     id=ap_email
+${continueLoc}                  id=continue
+${pwdLoc}                       id=ap_password
+${loginBtnLoc}                  id=signInSubmit
+${languageLoc}                  id=icp-touch-link-language
+
+###Home Page
+${userNameXpath}                //a[@id='nav-link-accountList']/span[@class='nav-line-1']
+${shopCategoryLoc}              id=nav-shop
+${categoryListLoc}              //div[@id='nav-flyout-shopAll']//div[contains(@class, 'nav-flyout-content nav-tpl-itemList')]//span[@class='nav-text']
+${selectCategoryLoc}            id=searchDropdownBox
+${searchbarLoc}                 id=twotabsearchtextbox
+${searchGoLoc}                  //input[@type='submit']
+${itemClickLoc}                 //div[@class='s-result-list s-search-results sg-row']//div[@class='sg-row']//span[@class='rush-component']//img[@class='s-image']
+${acctListLoc}                  id=nav-link-accountList
+${youraccListLoc}               //div[@id='nav-al-your-account']/a/span
+
+###Product Information Page
+${newWindow}                    NEW
+${priceTagMainWinLoc}           //div[@class='s-result-list s-search-results sg-row']//div[@class='a-section a-spacing-medium']//span[@class='a-price-whole']
+${priceTagNewWinLoc}            //span[contains(@id,'priceblock')]
+${productTitleLoc}              id=productTitle
+${addToCartLoc}                 id=add-to-cart-button
+${addedToCartMsgLoc}            //div[@id='huc-v2-order-row-confirm-text']/h1
+${priceTagCartWintLoc}          //div[@id='hlb-subcart']//span[contains(@class,'a-color-price')]/span
+
+###Cart Page
+${shoppingCartTitleLoc}         //div[@id='sc-active-cart']//div[@class='a-row']/h2
+${proceedToCartLoc}             id=hlb-ptc-btn-native
+${cartLinkLoc}                  id=hlb-view-cart-announce
+${quantityLoc}                  id=a-autoid-0-announce
+${cartSubTotalLoc}              //form[@id='gutterCartViewForm']//div[contains(@class,'sc-subtotal')]//span[contains(@class,'sc-price-sign')]/span
+${itemsLoc}                     //div[@data-name='Active Items']//div[contains(@id,'sc-item')]
+${deleteItemLoc}               //div[@data-name='Active Items']//div[contains(@id,'sc-item')]//div[contains(@class,'item-content')]//span[contains(@class,'sc-action-delete')]
+${emptyShoppingCartLoc}        //div[@id='sc-active-cart']//h1[@class='sc-empty-cart-header']
+${ItemOrder1}                  2
+${ItemOrder2}                  1
+
+###Delivery Address
+${deliverToThisAddLoc}          //div[@id='address-book-entry-0']//div[contains(@class,'ship-to-this-address')]/span
+${contDeliveryLoc}              //div[contains(@class,'save-sosp-button')]/div/span
+${headerLoc}                    //h1[@class='a-spacing-base']
+
+###Payment page
+${netbankLoc}                   //div[@class='a-box-inner']//div[2]//div[3]//div[@class='a-box-inner a-padding-small']//input[@name='ppw-instrumentRowSelection']
+${contPaymentLoc}               //div[contains(@class,'a-column a-span3')]//span[contains(@class,'a-button-primary pmts-button-input')]
+${chooseBankLoc}                //*[@name='ppw-bankSelection_dropdown']
+${enterCVVLoc}                  //div[contains(@class,'pmts-credit-card-verification')]//input[@type='password']
+
+###Review Order Page
+${reviewOrderItemLoc}           //strong[@class='asin-title']
+${itemPriceLoc}                 //div[@id='subtotals-marketplace-table']/table/tbody//tr[1]//td[contains(@class,'aok-nowrap')]/span
+${deliveryFeeLoc}               //div[@id='subtotals-marketplace-table']/table/tbody//tr[2]//td[contains(@class,'aok-nowrap')]/span
+${grandTotalLoc}                //div[@id='subtotals-marketplace-table']/table/tbody//td[contains(@class,'grand-total-price')]//span
+${placeOrderLoc}                id=placeYourOrder
+${quantityNoLoc}                //span[@class='quantity-display']
+
+###Bank Payment Page
+${icicLoc}                      //span[@id='HDisplay1.Rb12.C2']/label

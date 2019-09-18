@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="339635b1-e6d4-49b8-b901-72a223b0effd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElementLocators/amazonElemLoc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ElementLocators/amazonElemLoc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keywords/amazonKeywords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Keywords/amazonKeywords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keywords/seleniumTSKeywords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Keywords/seleniumTSKeywords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/amazonTestData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/amazonTestData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/constants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/constants.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcases/amazonTCs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Testcases/amazonTCs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcases/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Testcases/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcases/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Testcases/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcases/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Testcases/report.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Keywords/amazonKeywords.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="145" column="95" selection-start-line="145" selection-start-column="95" selection-end-line="145" selection-end-column="95" />
+              <folding>
+                <element signature="e#0#252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElementLocators/amazonDEElemLoc.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="142" selection-start-line="1" selection-start-column="142" selection-end-line="1" selection-end-column="142" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElementLocators/amazonPTElemLoc.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="133" selection-start-line="1" selection-start-column="133" selection-end-line="1" selection-end-column="133" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/amazonTestData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testcases/amazonTCs.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#275#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Testcases/amazonSignIn.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/amazonDETestData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/amazonPTTestData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/amazonESTestData.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElementLocators/amazonESElemLoc.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="142" selection-start-line="1" selection-start-column="142" selection-end-line="1" selection-end-column="142" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Robot Keywords" />
+        <option value="Robot Test Suite" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>${subLink_Loc}</find>
+      <find>selList</find>
+      <find>selListIndex</find>
+      <find>Verify</find>
+      <find>Element Text Should Be</find>
+      <find>Get Text</find>
+      <find>${quantityLoc}</find>
+      <find>id=a-autoid-0-announce</find>
+      <find>hlb-view-cart-announce</find>
+      <find>Hea</find>
+      <find>catenat</find>
+      <find>itemsLoc</find>
+      <find>id=priceblock_ourprice</find>
+      <find>priceOnMainWin</find>
+      <find>quanity</find>
+      <find>cate</find>
+      <find>caten</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/launchBrowser.robot" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Testcases/launchBrowser.robot" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/browserKeywords.robot" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/browserKeywords.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/TechlisticKeywords.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Testcases/log.robot" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/ElementLocators/practicePageElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Testcases/launchBrowser.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Resources/constants.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/appSpecificKeywords.txt" />
+        <option value="$PROJECT_DIR$/Robotframework_Site/Keywords/seleniumKeywords.txt" />
+        <option value="$PROJECT_DIR$/Testcases/launchBrowser.txt" />
+        <option value="$PROJECT_DIR$/Keywords/seleniumKeywords.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/practicePageElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Keywords/appSpecificKeywords.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/techlisticElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Testcases/browserTCs.txt" />
+        <option value="$PROJECT_DIR$/Keywords/techlisticKeywords.txt" />
+        <option value="$PROJECT_DIR$/Testcases/techlisticTCs.txt" />
+        <option value="$PROJECT_DIR$/Resources/techlisticTestData.txt" />
+        <option value="$PROJECT_DIR$/Keywords/customDefKeywords.py" />
+        <option value="$PROJECT_DIR$/Keywords/seleniumTSKeywords.txt" />
+        <option value="$PROJECT_DIR$/Resources/constants.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/amazonElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Resources/amazonTestData.txt" />
+        <option value="$PROJECT_DIR$/__init.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/amazonDEElemLoc.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/amazonPTElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Resources/amazonDETestData.txt" />
+        <option value="$PROJECT_DIR$/Resources/amazonPTTestData.txt" />
+        <option value="$PROJECT_DIR$/ElementLocators/amazonESElemLoc.txt" />
+        <option value="$PROJECT_DIR$/Resources/amazonESTestData.txt" />
+        <option value="$PROJECT_DIR$/Keywords/amazonKeywords.txt" />
+        <option value="$PROJECT_DIR$/Testcases/amazonTCs.txt" />
+        <option value="$PROJECT_DIR$/Testcases/amazonSignIn.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="374" />
+    <option name="y" value="30" />
+    <option name="width" value="1040" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Selenium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Selenium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
+              <item name="Videos" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="339635b1-e6d4-49b8-b901-72a223b0effd" name="Default Changelist" comment="" />
+      <created>1561352826971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561352826971</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24479167" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.42553192" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Testcases/selenium-screenshot-1.png" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Testcases/selenium-screenshot-53.png" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Testcases/selenium-screenshot-52.png" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Testcases/log.robot" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Testcases/launchBrowser.txt" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Keywords/appSpecificKeywords.txt" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Keywords/seleniumKeywords.txt" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/ElementLocators/practicePageElemLoc.txt" />
+    <entry file="file://$PROJECT_DIR$/Robotframework_Site/Resources/constants.txt" />
+    <entry file="file://$PROJECT_DIR$/Testcases/log.robot" />
+    <entry file="file://$PROJECT_DIR$/Resources/techlisticTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/techlisticKeywords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/techlisticTCs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElementLocators/techlisticElemLoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/customDefKeywords.py" />
+    <entry file="file://$PROJECT_DIR$/__init.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/constants.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElementLocators/amazonElemLoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/seleniumTSKeywords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#301#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElementLocators/amazonDEElemLoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="142" selection-start-line="1" selection-start-column="142" selection-end-line="1" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/amazonTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/amazonDETestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElementLocators/amazonESElemLoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="142" selection-start-line="1" selection-start-column="142" selection-end-line="1" selection-end-column="142" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/amazonPTTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/amazonESTestData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElementLocators/amazonPTElemLoc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="133" selection-start-line="1" selection-start-column="133" selection-end-line="1" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/amazonKeywords.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="145" column="95" selection-start-line="145" selection-start-column="95" selection-end-line="145" selection-end-column="95" />
+          <folding>
+            <element signature="e#0#252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/amazonTCs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/amazonSignIn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,146 @@
+*** Settings ***
+Resource          ../ElementLocators/amazonElemLoc.txt
+Resource          ../Resources/constants.txt
+Resource          ../Resources/amazonTestData.txt
+Resource          ../Keywords/seleniumTSKeywords.txt
+Resource          ../__init.txt
+
+*** Keywords ***
+IMPORT_VARIABLE_FILE
+    [Documentation]  Imports the resource files based on the language
+    Run Keyword if  '${LANGUAGE}'=='ES'    Import Resource    ${rootFolderPath}/ElementLocators/amazonESElemLoc.txt
+    ...    ELSE IF  '${LANGUAGE}'=='DE'    Import Resource    ${rootFolderPath}/ElementLocators/amazonDEElemLoc.txt
+    ...    ELSE IF  '${LANGUAGE}'=='PT'    Import Resource    ${rootFolderPath}/ElementLocators/amazonPTElemLoc.txt
+    Run Keyword if  '${LANGUAGE}'=='ES'    Import Resource    ${rootFolderPath}/Resources/amazonESTestData.txt
+    ...    ELSE IF  '${LANGUAGE}'=='DE'    Import Resource    ${rootFolderPath}/Resources/amazonDETestData.txt
+    ...    ELSE IF  '${LANGUAGE}'=='PT'    Import Resource    ${rootFolderPath}/Resources/amazonPTTestData.txt
+
+Launch Amazon Browser Application
+    Launch Browser Application  ${amazonUrl}  ${browser}
+
+Launch Amazon Region Wise Application
+    Launch Browser Application  ${amazonUsUrl}  ${browser}
+    Sleep   4s
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Sleep   4s
+    Mouse Over on an Element  ${languageLoc}
+    Sleep   4s
+    Click Browser Element  ${selectLangLoc}
+    Sleep   4s
+
+Proceed to SignIn
+    [Documentation]  Sign into amazon site
+    Input Browser Text  ${emailLoc}  ${phoneNo}
+    Click Browser Button  ${continueLoc}
+    Input Browser Password  ${pwdLoc}  ${password}
+    Click Browser Button  ${loginBtnLoc}
+    ${present}=  Run Keyword And Return Status    Element Should Be Visible   ${loginBtnLoc}
+    Run Keyword If    ${present} == True  Run Keywords
+    ...     Input Browser Password      ${pwdLoc}     ${password}
+    ...     AND    Sleep   30s
+    ...     AND    Click Browser Button  ${loginBtnLoc}
+
+Sign Into Amazon
+    [Documentation]  Sign into amazon site
+    Click on a Link  ${signInLoc}
+    wait until an element is visible    ${emailLoc}
+    Input Browser Text  ${emailLoc}  ${phoneNo}
+    Run Keyword if  '${LANGUAGE}'==''    Click Browser Button  ${continueLoc}
+    Input Browser Password  ${pwdLoc}  ${password}
+    Click Browser Button  ${loginBtnLoc}
+    Sleep    30s
+    ${present}=  Run Keyword And Return Status    Element Should Be Visible   ${loginBtnLoc}
+    Run Keyword If    ${present} == True  Run Keywords
+    ...     Input Browser Password      ${pwdLoc}     ${password}
+    ...     AND    Sleep   30s
+    ...     AND    Click Browser Button  ${loginBtnLoc}
+
+Verify User Account
+    [Documentation]  Verifies the user account is matching or not
+    Verify Text  ${userNameXpath}  ${username}
+
+Verify Amazon List
+    [Documentation]  Verifies the available options on Mouse Over
+    [Arguments]  ${mouseOverLoc}  ${listLoc}  ${expList}
+    Mouse Over on an Element  ${mouseOverLoc}
+    Verify List Items  ${listLoc}  ${expList}
+
+Add Item To Cart
+    [Documentation]  Add Item To Cart
+    [Arguments]  ${searchText}
+    Select Browser Combobox by Label  ${selectCategoryLoc}  All Categories
+    Input Browser Text  ${searchbarLoc}  ${searchText}
+    Click Browser Element  ${searchGoLoc}
+    ${priceOnMainWin}=   Get Text    ${priceTagMainWinLoc}
+    Click Browser Element  ${itemClickLoc}
+    Switch a Browser Window  ${newWindow}
+    Verify Actual Contains Expected Text    ${productTitleLoc}    ${searchText}
+    Verify Actual Contains Expected Text    ${priceTagNewWinLoc}    ${priceOnMainWin}
+    Click Browser Element  ${addToCartLoc}
+    Verify Text    ${addedToCartMsgLoc}    ${expAddToCartMsg}
+    Set Global Variable  ${priceOnMainWin}
+
+Proceed To Buy
+    wait until an element is visible  ${proceedToCartLoc}
+    Click Browser Element  ${proceedToCartLoc}
+
+Go To Cart
+    wait until an element is visible  ${cartLinkLoc}
+    Click Browser Element  ${cartLinkLoc}
+    wait until an element is visible  ${shoppingCartTitleLoc}
+    Verify Actual Contains Expected Text  ${shoppingCartTitleLoc}  Shopping Cart
+
+Proceed To Payment
+    wait until an element is visible  ${deliverToThisAddLoc}
+    Click Browser Element  ${deliverToThisAddLoc}
+    wait until an element is visible  ${headerLoc}
+    Click Browser Element  ${contDeliveryLoc}
+    wait until an element is visible  ${headerLoc}
+
+Enter Payment Details
+    wait until an element is visible  ${enterCVVLoc}
+    Input Browser Password  ${enterCVVLoc}  ${cvv}
+    Click Browser Element  ${contPaymentLoc}
+
+Review Order Details
+    [Arguments]  ${orderItem}  ${quantity}
+    Wait Until an Element Is Visible  ${reviewOrderItemLoc}
+    Verify Actual Contains Expected Text  ${reviewOrderItemLoc}  ${orderItem}
+    Verify Text  ${quantityNoLoc}  ${quantity}
+    Verify Actual Contains Expected Text  ${itemPriceLoc}  ${priceOnMainWin}
+    ${itemPrice}=  Replace String Using Regexp  ${priceOnMainWin}  (,| )  ${EMPTY}
+    ${itemPrice}=    Convert To Number  ${itemPrice}
+    ${present}=  Run Keyword And Return Status    Element Should Be Visible   ${deliveryFeeLoc}
+    ${delFee}=      Get Text  ${deliveryFeeLoc}
+    ${delFee}=      Convert To Number  ${delFee}
+    ${orderTotal}=  Evaluate  ${itemPrice} + ${delFee}
+    ${orderTotal}=  Convert To String  ${orderTotal}
+    ${grandTotal}=  Get Text  ${grandTotalLoc}
+    ${grandTotal}=  Replace String Using Regexp  ${grandTotal}  (,| )  ${EMPTY}
+    Should Contain   ${grandTotal}   ${orderTotal}
+
+Modify Quantity in Cart
+    [Arguments]    ${itemOrder}    ${no}
+    ${quanityXPath}=  Catenate  SEPARATOR=  ${itemsLoc}[  ${itemOrder}]  //div[contains(@class,'item-content')]//select[@name='quantity']
+    ${priceXPath}=  Catenate  SEPARATOR=  ${itemsLoc}[  ${itemOrder}]  //div[contains(@class,'item-content')]//span[contains(@class,'sc-price')]
+    ${itemPrice}=  Get Text  ${priceXPath}
+    ${itemPrice}=  Replace String Using Regexp  ${itemPrice}  (,| )  ${EMPTY}
+    ${subTotalPrice}=  Get Text  ${cartSubTotalLoc}
+    ${subTotalPrice}=  Replace String Using Regexp  ${subTotalPrice}  (,| )  ${EMPTY}
+    Select Browser Combobox by Label  ${quanityXPath}  ${no}
+    Sleep   3s
+    ${itemPrice}=  Convert To Number  ${itemPrice}
+    ${subTotalPrice}=  Convert To Number  ${subTotalPrice}
+    ${no}=  Convert To Number  ${no}
+    ${updatedTotalPrice}=  Evaluate  ${itemPrice} * ${no-1} + ${subTotalPrice}
+    ${updatedTotalPrice}=  Convert To String  ${updatedTotalPrice}
+    ${actualTotalPrice}=  Get Text  ${cartSubTotalLoc}
+    ${actualTotalPrice}=  Replace String Using Regexp  ${actualTotalPrice}  (,| )  ${EMPTY}
+    Should Contain   ${actualTotalPrice}   ${updatedTotalPrice}
+
+Empty Shopping Cart
+    ${quantityCount}=  Get Element Count  ${deleteItemLoc}
+    : FOR    ${index}    IN RANGE   ${quantityCount}
+    \   Click Browser Element  ${deleteItemLoc}
+    \   Sleep  4s
+    Verify Actual Contains Expected Text  ${emptyShoppingCartLoc}  Your Shopping Cart is empty.

@@ -1,0 +1,193 @@
+*** Settings ***
+Library           Selenium2Library      implicit_wait=3s
+Library           ScreenCapLibrary
+Library           OperatingSystem
+Library           String
+Library           Collections
+Resource          ../Resources/constants.txt
+Resource          ../ElementLocators/techlisticElemLoc.txt
+
+*** Keywords ***
+
+Launch Browser Application
+    [Documentation]  Launch and Navigate the base url
+    [Arguments]     ${url}     ${browser}
+    [Timeout]   60
+    Open Browser    ${url}     ${browser}
+    Maximize Browser Window
+
+Wait Until an Element Is Visible
+    [Documentation]  Checks whether element is visible or not
+    [Arguments]  ${elemLoc}
+    Wait Until Element Is Visible   ${elemLoc}    timeout=10s
+
+Create a Directory for Videos
+    [Documentation]  Creates a directory for videos
+    ${time} =	Get Time
+    ${time} =   Replace String  ${time}    :    _
+    ${videosPath}=    Catenate  SEPARATOR=  ../Videos/Videos_   ${time}
+    set global variable     ${videosPath}
+    Create Directory    ${videosPath}
+
+Record Video
+    [Documentation]  Records video for suite
+    Log    ${videosPath}/${TEST NAME}
+    Start Video Recording  name=${videosPath}/${TEST NAME}
+
+Close All Browser Applications
+    [Documentation]  Closes all the browser applications which are opened
+    Close All Browsers
+
+Close Browser Application
+    [Documentation]  Closes the current browser application
+    Close Browser
+
+Close Current Open Window
+    [Documentation]  Closes the current opened window
+#    Close Window
+    Press Keys  CTRL+w
+
+Click Browser Element
+    [Documentation]  Clicks an Element
+    [Arguments]  ${elemLoc}
+    Click Element   ${elemLoc}
+
+Click Browser Button
+    [Documentation]  Clicks a button
+    [Arguments]  ${elemLoc}
+    Click Button   ${elemLoc}
+
+Input Browser Text
+    [Documentation]  Input text into element
+    [Arguments]  ${elemLoc}  ${inputText}
+    Clear Element Text  ${elemLoc}
+    Input Text  ${elemLoc}  ${inputText}
+
+Input Browser Password
+    [Documentation]  Input Password into element
+    [Arguments]  ${elemLoc}  ${inputText}
+    Clear Element Text  ${elemLoc}
+    Input Password  ${elemLoc}  ${inputText}
+
+Select Browser RadioButton
+    [Documentation]  Check and verify RadioButton
+    [Arguments]  ${groupName}   ${value}
+    Select Radio Button    ${groupName}   ${value}
+    Radio Button Should Be Set To   ${groupName}   ${value}
+
+Select Browser Checkbox
+    [Documentation]  Check and verify Checkbox
+    [Arguments]  ${elemLoc}
+    Select Checkbox   ${elemLoc}
+    Checkbox Should Be Selected   ${elemLoc}
+
+Select Browser Combobox by Index
+    [Documentation]  Select the combobox value by index
+    [Arguments]  ${elemLoc}     ${index}
+    Select From List By Index   ${elemLoc}  ${index}
+
+Select Browser Multiple Values in Combobox by Index
+    [Documentation]  Select the Multiple Values in combobox by index
+    [Arguments]  ${elemLoc}     @{index}
+    Select From List By Index   ${elemLoc}  @{index}
+
+Select Browser Combobox by Label
+    [Documentation]  Select the combobox value by label
+    [Arguments]  ${elemLoc}     ${label}
+    Select From List By Label   ${elemLoc}  ${label}
+    List Selection Should Be    ${elemLoc}  ${label}
+
+Select Browser Multiple Values in Combobox by Label
+    [Documentation]  Select the Multiple Values in combobox by label
+    [Arguments]  ${elemLoc}     @{label}
+    Select From List By Label   ${elemLoc}  @{label}
+    List Selection Should Be    ${elemLoc}  @{label}
+
+Select Browser Combobox by Value
+    [Documentation]  Select the combobox value by Value
+    [Arguments]  ${elemLoc}     ${value}
+    Select From List By Value   ${elemLoc}  ${value}
+    List Selection Should Be    ${elemLoc}  ${value}
+
+Select Browser Multiple Values in Combobox by Value
+    [Documentation]  Select the Multiple Values in combobox by value
+    [Arguments]  ${elemLoc}     @{value}
+    Select From List By Value   ${elemLoc}  @{value}
+    List Selection Should Be    ${elemLoc}  @{value}
+
+Choose Input File
+    [Documentation]  Input File Path
+    [Arguments]  ${elemLoc}     ${filePath}
+    Choose File     ${elemLoc}     ${filePath}
+
+Click on a Link
+    [Documentation]  Click on a Specified link
+    [Arguments]  ${elemLoc}
+    Click Link   ${elemLoc}
+
+Accept Alert
+    [Documentation]  Accepts Popup Alert
+    Handle Alert  action=ACCEPT  timeout=3s
+
+Dismess Alert
+    [Documentation]  Dismess Popup Alert
+    Handle Alert  action=DISMISS  timeout=3s
+
+Verify Element is Disabled
+    [Documentation]  Verifies whether element is disabled or not
+    [Arguments]  ${elemLoc}
+    Element Should Be Disabled   ${elemLoc}
+
+Verify Element is Enabled
+    [Documentation]  Verifies whether element is Enabled or not
+    [Arguments]  ${elemLoc}
+    Element Should Be Enabled   ${elemLoc}
+
+Verify Element is Focused
+    [Documentation]  Verifies whether element is Focused or not
+    [Arguments]  ${elemLoc}
+    Element Should Be Focused   ${elemLoc}
+
+Verify Element is Visible
+    [Documentation]  Verifies whether element is Visible or not
+    [Arguments]  ${elemLoc}
+    Element Should Be Visible   ${elemLoc}    msg=Element ${elemLoc} is not visible
+
+Verify Text
+    [Documentation]  Verifies whether text matches or not
+    [Arguments]  ${elemLoc}  ${expText}
+    Element Text Should Be  ${elemLoc}  ${expText}
+
+Switch a Browser Window
+    [Documentation]  Swithch to new browser window
+    [Arguments]  ${swicthTo}
+    Select Window   ${swicthTo}
+    Sleep   3s
+
+Mouse Over on an Element
+    [Documentation]  Moves the mouse over an element
+    [Arguments]  ${elemLoc}
+    Mouse Over  ${elemLoc}
+
+Verify List Items
+    [Documentation]  Verifies the text of list items
+    [Arguments]  ${elemLoc}  ${expList}
+    @{actList}=    Create List
+    @{elements}=  Get Webelements  ${elemLoc}
+    : FOR    ${element}    IN    @{elements}
+    \   Mouse Over on an Element    ${element}
+    \    ${value}=    get text    ${element}
+    \    Append To List    ${actList}    ${value}
+    Lists Should Be Equal    ${expList}    ${actList}    msg= lists are not matching
+
+Verify Actual Contains Expected Text
+    [Documentation]  Verify whether Text contains expected value
+    [Arguments]  ${elemLoc}   ${expectedText}
+    ${actualText}=  Get Text    ${elemLoc}
+    Should Contain    ${actualText}    ${expectedText}     msg=actual text ${actualText} not contains expected ${expectedText}
+
+Verify Contains Text
+    [Documentation]  Verify whether Text contains expected value
+    [Arguments]  ${elemLoc}   ${expectedText}
+    ${actualText}=  Get Text    ${elemLoc}
+    Should Contain    ${expectedText}    ${actualText}     msg=expected text ${expectedText} not contains actual ${actualText}

@@ -1,0 +1,2 @@
+*** Variables ***
+${selectLangLoc}                //div[@id='nav-flyout-icp-footer-flyout']//div[@class='nav-template nav-flyout-content nav-tpl-itemList']//a[3]/span[@class='nav-text']

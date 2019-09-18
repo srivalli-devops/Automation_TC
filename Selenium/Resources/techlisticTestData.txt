@@ -1,0 +1,7 @@
+*** Variables ***
+${baseUrl}                  https://www.techlistic.com/p/selenium-practice-form.html
+@{selList}                  Browser Commands    Navigation Commands     Wait Commands
+${continent}                Africa
+${fName}                    Selenium
+${lName}                    Automation
+

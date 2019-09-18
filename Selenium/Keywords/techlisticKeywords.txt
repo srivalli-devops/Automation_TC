@@ -1,0 +1,46 @@
+*** Settings ***
+
+Resource          ../ElementLocators/techlisticElemLoc.txt
+Resource          ../Resources/constants.txt
+Resource          ../Resources/techlisticTestData.txt
+Resource          ../Keywords/seleniumTSKeywords.txt
+
+*** Keywords ***
+
+Launch Techlistic Browser Application
+    Launch Browser Application  ${baseURL}  ${browser}
+
+Wait Until Techlistic HomePage Is Visible
+    Wait Until an Element Is Visible    ${titleElemLoc}
+
+Input First and Last Name
+    [Arguments]  ${fName}   ${lName}
+    Input Browser Text  ${firstName_TbLoc}  ${fName}
+    Input Browser Text  ${lastName_TbLoc}   ${lName}
+
+Select Gender
+    [Arguments]  ${groupNameVal_Loc}
+    Select Browser RadioButton    ${groupName_Loc}   ${groupNameVal_Loc}
+
+Select Profession
+    [Arguments]  ${prof_ChBLoc}
+    Select Browser Checkbox  ${prof_ChBLoc}
+
+Select Continent
+    [Arguments]  ${continent}
+    Select Browser Combobox by Label  ${cont_CBLoc}     ${continent}
+
+Select Selenium Commands
+    [Arguments]  @{selList}
+    Select Browser Multiple Values in Combobox by Label  ${selCmd_CBLoc}    @{selList}
+
+Upload File in Techlistic Browser
+    Choose Input File  ${filePath_Loc}   ${CURDIR}\\seleniumTSKeywords.txt
+
+Click on Telgraph link
+    Click on a Link  ${Link_Loc}
+
+Switch BackTo Techlistic Window
+    Switch a Browser Window  ${switchBack}
+    Sleep   2s
+

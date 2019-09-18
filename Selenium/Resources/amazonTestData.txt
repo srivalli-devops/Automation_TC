@@ -1,0 +1,21 @@
+*** Variables ***
+${amazonUrl}          https://www.amazon.in/
+${amazonUsUrl}        https://www.amazon.com/
+${phoneNo}            7989868925
+${password}           123456
+${userName}           Hello, RaviChand
+@{expCategoryList}    Echo & Alexa    Fire TV Stick    Kindle E-Readers & eBooks    Amazon Prime Video    Amazon Prime Music    Mobiles, Computers    TV, Appliances, Electronics    Men's Fashion    Women's Fashion    Home, Kitchen, Pets    Beauty, Health, Grocery    Sports, Fitness, Bags, Luggage    Toys, Baby Products, Kids' Fashion    Car, Motorbike, Industrial    Books & Audible    Movies, Music & Video Games    Gift Cards & Mobile Recharges    Flight Tickets    Full Store Directory
+@{expAccountList}     Your Account    Your Orders    Your Wish List    Recommended for you    Prime Membership    Prime Video    Subscribe & Save Items    Amazon Business Account    Seller Account    Your Digital Content & Devices
+#@{actualList}
+${searchText}         oneplus 7 mobile phones
+${expTitle}           OnePlus 7
+${expAddToCartMsg}    Added to Cart
+${updateQuantity}     2
+${bankName}           ICICI Bank
+${bankLoginLabel}     Payment through ICICI Bank
+${TV}                 TV
+${Item2}              Pen Drive
+${Item3}              Salt
+${noOfItems}
+${cvv}                123
+${quanity}            1
