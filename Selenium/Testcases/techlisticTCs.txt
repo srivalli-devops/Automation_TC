@@ -1,10 +1,12 @@
 *** Settings ***
 Resource          ../Keywords/techlisticKeywords.txt
 
-Suite Setup    Create a Directory for Videos
-Test Setup     Run keywords     Record Video    Launch Techlistic Browser Application
-Test Teardown  Run keywords     Close Browser Application    Stop Video Recording
-Test Timeout  60s
+#Suite Setup    Create a Directory for Videos
+#Test Setup     Run keywords     Record Video    Launch Techlistic Browser Application
+#Test Teardown  Run keywords     Close Browser Application    Stop Video Recording
+Test Setup     Run keyword     Launch Techlistic Browser Application
+Test Teardown  Run keyword     Close Browser Application
+
 
 *** Test Cases ***
 
