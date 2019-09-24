@@ -1,6 +1,6 @@
 *** Settings ***
 Library           Selenium2Library      implicit_wait=3s
-Library           ScreenCapLibrary
+#Library           ScreenCapLibrary
 Library           OperatingSystem
 Library           String
 Library           Collections
