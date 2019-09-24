@@ -1,6 +1,3 @@
 *** Variables ***
-${browser}
-${LANGUAGE}
-
-
-
+${browser}        ff
+${LANGUAGE}       
